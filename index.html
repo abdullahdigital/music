@@ -16,8 +16,6 @@
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   
-  <link rel="stylesheet" href="style.css">
-  
   <link rel="shortcut icon" href="img/music.png" type="image/x-icon">
 
   <style>
@@ -25,91 +23,126 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      max-width: 100%;
-      /* overflow-x: hidden; */
       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #1c1c1c;
+      color: #fff;
+    }
+
+    .navbar {
+      background-color: #282828;
+    }
+
+    .nav-link {
+      color: #fff !important;
+    }
+
+    .nav-link:hover {
+      color: #1db954 !important;
     }
 
     .img-fluid {
       height: 250px;
+      border-radius: 10px;
     }
-    .boxmusic:hover{
-      transform:scale(0.98) ;
+
+    .boxmusic {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .boxmusic:hover {
+      transform: scale(1.05);
       overflow: hidden;
       padding: 5px;
     }
 
-    /* default is hide music player */
-    #aplayer{
+    #aplayer {
       position: fixed;
       bottom: -100%;
       left: 0;
       width: 100%;
       margin: 0;
       box-shadow: 0 -2px 2px #dadada;
-      background-color: #fff;
+      background-color: #282828;
       transition: all ease 0.5s;
     }
-    #aplayer.showPlayer{
+
+    #aplayer.showPlayer {
       bottom: 0;
     }
 
-
-    /* music player customizing style */
-    .aplayer .aplayer-info .aplayer-contoller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded{
+    .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
       background: #e0e0e0;
       height: 4px;
     }
-    .aplayer .aplayer-info .aplayer-contoller .aplayer-bar-wrap .aplayer-bar .aplayer-played{
-      background: #2196F3 !important;
+
+    .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {
+      background: #1db954 !important;
       height: 4px;
     }
-    .aplayer .aplayer-info .aplayer-contoller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb{
-      background: #2196F3 !important;
-      
+
+    .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {
+      background: #1db954 !important;
     }
-    .aplayer .aplayer-icon{
+
+    .aplayer .aplayer-icon {
       width: 20px;
       height: 20px;
     }
-    .aplayer .aplayer-info .aplayer-contoller .aplayer-time .aplayer-icon path{
-      fill: #000;
+
+    .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path {
+      fill: #fff;
     }
-    .aplayer .aplayer-info .aplayer-music{
+
+    .aplayer .aplayer-info .aplayer-music {
       margin-bottom: 5px;
     }
 
+    footer {
+      background-color: #282828;
+      text-align: center;
+      padding: 20px 0;
+      color: #fff;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
 
+    footer a {
+      color: #1db954;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #1ed760;
+    }
   </style>
 </head>
 
 <body>
-  <!-- If you want to add click feature add this (class="enlargeable-image") -->
-
-  <div id="preloader"></div>
 
   <!-- Header -->
   <header>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-light ps-5 pe-5 ">
+    <nav class="navbar navbar-expand-lg navbar-dark ps-5 pe-5">
       <div class="container-fluid">
-        <a class="navbar-brand me-5" href="#">Logo</a>
+        <a class="navbar-brand me-5" href="/index.html"><img src="img/logo7.png" alt="logo" width="50rem"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active ps-5 pe-5 me-4 ms-5" aria-current="page" href="#">Home</a>
-            <a class="nav-link ps-5 pe-5 me-4 ms-5" href="#">About Us</a>
-            <a class="nav-link ps-5 pe-5 me-4 ms-5" href="#">Contact Us</a>
-            <a class="nav-link disabled ps-5 pe-5 me-4 ms-5">Features</a>
+            <a class="nav-link active ps-5 pe-5 me-4 ms-5" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link ps-5 pe-5 me-4 ms-5" target="_blank" href="https://abdullahdigital.github.io/portfolio/">Portfolio</a>
+            <a class="nav-link ps-5 pe-5 me-4 ms-5" target="_blank" href="https://abdullahdigital.github.io/landingpage/">Landing Page</a>
+            <a class="nav-link ps-5 pe-5 me-4 ms-5" target="_blank" href="https://abdullahdigital.github.io/restaurant/">Restaurant Website</a>
           </div>
         </div>
       </div>
     </nav>
-
-
   </header>
 
   <!-- Main -->
@@ -161,7 +194,7 @@
   <footer>
 
     <div>
-      © Copyright 2023 <a href="https://www.instagram.com/abdullahjani100/" target="_blank">@abdullahjani100.</a> All
+      © Copyright 2023 <a href="https://www.instagram.com/abdullahwebmaster/" target="_blank">@abdullahwebmaster.</a> All
       Rights Reserved.
     </div>
   </footer>
@@ -182,8 +215,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-
-  <!-- Existing code -->
 
 <script>
 
