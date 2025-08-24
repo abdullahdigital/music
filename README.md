@@ -1,4 +1,4 @@
-    # 🚀 Music Website Showcase
+# 🚀 Music Website Showcase
 
 ## 🌍 Live Demo
 https://abdullahdigital.github.io/music/
